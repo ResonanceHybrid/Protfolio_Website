@@ -1,21 +1,27 @@
-/*GOOGLE FONTS*/
+/*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-
+/*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
   --font-semi: 600;
+  /*===== Colores =====*/
+  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
+  /* HSL color mode */
   --hue-color: 000;
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
+  /*===== Fuente y tipografia =====*/
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
+  /*===== Margenes =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
+  /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
 }
@@ -29,7 +35,7 @@
   }
 }
 
-/*BASE*/
+/*===== BASE =====*/
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -69,7 +75,7 @@ img {
   display: block;
 }
 
-/*CLASS CSS*/
+
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
@@ -96,7 +102,7 @@ img {
   padding-bottom: 2rem;
 }
 
-/*LAYOUT*/
+
 .bd-grid {
   max-width: 1024px;
   display: grid;
@@ -114,7 +120,7 @@ img {
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
-/*NAV*/
+
 .nav {
   height: var(--header-height);
   display: flex;
@@ -133,8 +139,12 @@ img {
     padding: 2rem;
     background-color: var(--second-color);
     transition: .5s;
+
   }
 }
+
+
+
 
 .nav__item {
   margin-bottom: var(--mb-4);
@@ -203,6 +213,18 @@ img {
 
 .home__title-color {
   color: var(--first-color);
+  animation: hueRotate 4s alternate infinite;
+}
+@keyframes hueRotate{
+  0% {
+    filter:  hue-rotate(279deg);
+  }
+  50% {
+    filter:  hue-rotate(197deg);
+  }
+  100% {
+    filter:  hue-rotate(12deg);
+  }
 }
 
 .home__social {
@@ -215,6 +237,8 @@ img {
   margin-bottom: var(--mb-2);
   font-size: 1.5rem;
   color: var(--second-color);
+  animation: hueRotate 7s alternate infinite;
+
 }
 
 .home__social-icon:hover {
@@ -226,18 +250,29 @@ img {
   right: 0;
   bottom: 0;
   width: 260px;
+  
+
 }
 
 .home__blob {
   fill: var(--first-color);
+  animation: morph 8s linear infinite;
+
 }
 
 .home__blob-img {
   width: 360px;
+
+
 }
+ 
+
+
+
 .typewriter{
   display: inline-block ;
 }
+
 .text{
   font-size: 40px;
   letter-spacing: 0px;
@@ -245,7 +280,8 @@ img {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 2s alternate infinite,cursor .4s step-end infinite alternate ;
+  animation: typing 2s alternate infinite,step-end infinite alternate ;
+  
 }
 @keyframes cursor{
   50% { border-color: transparent ; }
@@ -253,6 +289,7 @@ img {
 @keyframes typing{
    from { width: 0 }
 }
+
 
 /*BUTTONS*/
 .button {
@@ -497,6 +534,7 @@ figcaption{
   }
   .section-title {
     margin-bottom: var(--mb-6);
+    
   }
   .section-title::after {
     width: 80px;
