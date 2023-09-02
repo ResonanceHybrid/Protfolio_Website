@@ -1,27 +1,19 @@
-/*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-/*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
   --font-semi: 600;
-  /*===== Colores =====*/
-  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
-  /* HSL color mode */
   --hue-color: 000;
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
-  /*===== Fuente y tipografia =====*/
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
   --smaller-font-size: .75rem;
-  /*===== Margenes =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
   --mb-5: 2.5rem;
   --mb-6: 3rem;
-  /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
 }
@@ -35,7 +27,6 @@
   }
 }
 
-/*===== BASE =====*/
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -418,6 +409,80 @@ figcaption{
 .work__img img:hover {
   transform: scale(1.1);
 }
+body, h1, h2, p, a, img {
+  margin: 0;
+  padding: 0;
+}
+
+.work {
+  background-color: #f7f7f7;
+  padding: 20px;
+  text-align: center; 
+}
+
+/* Style individual project blocks */
+.project-block {
+  display: inline-block; 
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  width: calc(45% - 20px); 
+  margin: 10px;
+  vertical-align: top; 
+}
+
+
+@media (max-width: 768px) {
+  .project-block {
+      width: 100%; 
+      float: none; 
+      margin: 10px auto;
+      display: block; 
+  }
+}
+
+.project-block:hover {
+  transform: translateY(-5px);
+}
+
+/* Style project images */
+.project-block img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.project-block h2 {
+  font-size: 25px; 
+  color: #333;
+  margin-bottom: 8px; 
+}
+
+.project-block p {
+  font-size: 20px; 
+  color: #777;
+  margin-bottom: 12px; 
+}
+
+
+.project-block a {
+  display: inline-block;
+  padding: 6px 12px; 
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.project-block a:hover {
+  background-color: #0056b3;
+}
+
 
 /* CONTACT*/
 .contact__input {
@@ -594,3 +659,4 @@ figcaption{
     width: 450px;
   }
 }
+
