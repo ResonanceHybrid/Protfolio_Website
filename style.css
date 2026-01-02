@@ -415,7 +415,7 @@ body, h1, h2, p, a, img {
 }
 
 .work {
-  background-color: #f7f7f7;
+  background-color: #fff;
   padding: 20px;
   text-align: center; 
 }
@@ -659,6 +659,7 @@ body, h1, h2, p, a, img {
     width: 450px;
   }
 }
+
 
 
 
