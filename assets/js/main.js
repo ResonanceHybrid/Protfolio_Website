@@ -470,7 +470,9 @@
         const SKILLS = [
             ['Flutter', 'bxl-flutter'],
             ['Dart', 'bx-code-alt'],
+            ['AI Agents', 'bx-bot'],
             ['Firebase', 'bxl-firebase'],
+            ['CI/CD', 'bx-infinite'],
             ['HTML', 'bxl-html5'],
             ['CSS', 'bxl-css3'],
             ['Tailwind', 'bxl-tailwind-css'],
@@ -478,6 +480,8 @@
             ['BLoC', 'bx-cube'],
             ['Shorebird', 'bx-water'],
             ['FlutterFlow', 'bx-git-commit'],
+            ['Automation', 'bx-cog'],
+            ['VPS', 'bx-server'],
             ['Clerk', 'bx-lock-alt'],
             ['C/C++', 'bxl-c-plus-plus'],
             ['Postman', 'bx-terminal'],
