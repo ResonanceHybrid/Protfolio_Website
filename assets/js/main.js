@@ -238,7 +238,7 @@
         })();
 
         document.addEventListener('mouseover', e => {
-            const hot = e.target.closest('a, button, .ball, .sticker, .polaroid, .glyph');
+            const hot = e.target.closest('a, button, .ball, .sticker, .polaroid, .page-hero__img, .glyph');
             ring.classList.toggle('is-hot', !!hot);
         });
     })();
@@ -335,12 +335,14 @@
         if (!photo) return;
         let clicks = 0;
         photo.addEventListener('click', e => {
+            const hint = $('.tap-hint');
+            if (hint) hint.remove();
             photo.classList.remove('spin');
             void photo.offsetWidth; // restart animation
             photo.classList.add('spin');
             confetti.burst(e.clientX, e.clientY, 40);
             clicks++;
-            if (clicks === 5) achieve('photo', '📸 My face appreciates the attention.');
+            if (clicks === 5) achieve('photo', photo.dataset.tapMsg || '📸 My face appreciates the attention.');
         });
         photo.addEventListener('animationend', () => photo.classList.remove('spin'));
     })();
