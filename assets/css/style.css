@@ -1415,9 +1415,20 @@ html.js .reveal.in {
     margin: 0 auto;
   }
 
+  /* on mobile, let the psst note + scroll hint flow in the layout
+     instead of absolutely overlapping each other below the photo */
   .hero__psst {
-    right: 50%;
-    transform: translateX(50%) rotate(-3deg);
+    position: static;
+    margin-top: 2.4rem;
+    text-align: center;
+    transform: rotate(-3deg);
+  }
+
+  .hero__scroll-hint {
+    position: static;
+    align-self: center;
+    transform: none;
+    margin-top: 3.5rem;
   }
 
   .cards {
