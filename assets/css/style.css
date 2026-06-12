@@ -1474,6 +1474,356 @@ html.js .reveal.in {
   }
 }
 
+/* ---------- app article page (/mornivo) ---------- */
+
+.chip--hot {
+  background: var(--acc3);
+  color: var(--ink-dark);
+}
+
+.page-hero {
+  position: relative;
+  padding: 8.5rem 1.5rem 3rem;
+  overflow: clip;
+}
+
+.page-hero__inner {
+  width: min(100%, 1060px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.crumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin-bottom: 1.3rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.crumb:hover {
+  color: var(--acc);
+  transform: translateX(-3px);
+}
+
+.page-hero__title {
+  font-size: clamp(2.6rem, 7vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1.04;
+  margin-bottom: 0.8rem;
+}
+
+.page-hero__tagline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.4vw, 1.45rem);
+  color: var(--acc2);
+  margin-bottom: 1rem;
+}
+
+.page-hero__img {
+  width: min(100%, 400px);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+}
+
+/* article byline */
+.byline {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin-bottom: 1.3rem;
+}
+
+.byline img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+}
+
+.byline strong {
+  color: var(--ink);
+}
+
+.prose {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.07rem;
+}
+
+.prose p {
+  color: var(--ink-soft);
+  margin-bottom: 1.3rem;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose strong {
+  color: var(--ink);
+}
+
+/* feature grid */
+.feats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem 1.6rem;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.feat {
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 5px 5px 0 var(--sh);
+  padding: 1.35rem 1.4rem;
+  transform: rotate(var(--rot, 0deg));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feat:hover {
+  transform: rotate(0deg) translateY(-4px);
+  box-shadow: 7px 7px 0 var(--sh);
+}
+
+.feat__icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  background: var(--c, var(--acc3));
+  border: 2px solid var(--ink-dark);
+  border-radius: 50%;
+  box-shadow: 3px 3px 0 var(--sh);
+  margin-bottom: 0.9rem;
+}
+
+.feat h3 {
+  font-size: 1.07rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.feat p {
+  font-size: 0.93rem;
+  color: var(--ink-soft);
+}
+
+/* numbered steps */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.4rem 1.8rem;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.step {
+  position: relative;
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 6px 6px 0 var(--sh);
+  padding: 2.2rem 1.5rem 1.6rem;
+  transform: rotate(var(--rot, 0deg));
+  transition: transform 0.2s ease;
+}
+
+.step:hover {
+  transform: rotate(0deg) translateY(-4px);
+}
+
+.step__num {
+  position: absolute;
+  top: -22px;
+  left: 18px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--ink-dark);
+  background: var(--c, var(--acc3));
+  border: 2px solid var(--ink-dark);
+  border-radius: 50%;
+  box-shadow: 3px 3px 0 var(--sh);
+}
+
+.step h3 {
+  font-size: 1.18rem;
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+/* framed screenshot */
+.shot {
+  max-width: 920px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 7px 7px 0 var(--sh);
+  overflow: hidden;
+}
+
+.shot img {
+  width: 100%;
+}
+
+.shot-caption {
+  text-align: center;
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  color: var(--ink-soft);
+  margin-top: 1.1rem;
+  transform: rotate(-1deg);
+}
+
+/* faq accordion */
+.faq {
+  max-width: 720px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.1rem;
+}
+
+.faq__item {
+  background: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 4px 4px 0 var(--sh);
+  transform: rotate(var(--rot, 0deg));
+  transition: transform 0.2s ease;
+}
+
+.faq__item:hover {
+  transform: rotate(0deg);
+}
+
+.faq__item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.02rem;
+  padding: 1.05rem 1.25rem;
+  list-style: none;
+}
+
+.faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq__item summary::after {
+  content: '+';
+  flex-shrink: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--acc);
+  transition: transform 0.25s ease;
+}
+
+.faq__item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq__item p {
+  padding: 0 1.25rem 1.15rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+/* compact, centered portfolio bar */
+.portfolio-bar--fit {
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: fit-content;
+  max-width: min(90%, 820px);
+  gap: 1rem;
+}
+
+/* download section — pull the sticky note up */
+.section--tight {
+  padding-top: 1.5rem;
+}
+
+.section--tight .github-note {
+  margin-top: 0;
+}
+
+/* download buttons row */
+.dl-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+  .page-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    text-align: center;
+  }
+
+  .page-hero .hero__blurb {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-hero .hero__cta {
+    justify-content: center;
+  }
+
+  .page-hero .byline {
+    justify-content: center;
+  }
+
+  .page-hero .hero__visual {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .feats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    max-width: 460px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .feats {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+}
+
 /* ---------- reduced motion ---------- */
 
 @media (prefers-reduced-motion: reduce) {
